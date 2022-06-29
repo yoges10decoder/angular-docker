@@ -1,0 +1,16 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: nenwwpec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        label-key : label-value  
+    spec:
+      containers:
+        - name: deploment-container-name
+          image: billstachys/kimage:v1
+          imagePullPolicy: Always
+          ports:
+          - containerPort: 80
